@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<center><h1>Add a new Contact</h1>
+<form action="{{url_for('add')}}"method="post"><br>
+<div>ENTER NAME :<input type="text" name="name"><br><br>
+	 ENTER NUMBER :<input type="text" name="number"><br><br>
+<input type="Submit" value="Save">
+</div>
+</form></center>
+
+{% endblock %}

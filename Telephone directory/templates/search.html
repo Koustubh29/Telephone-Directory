@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<center>
+<div>
+<h1>Search Contact with Name</h1>
+<form action="{{url_for('search')}}"method="post"><br>
+NAME:<input type="text" name="name"><br><br>
+<input type="Submit" value="Enter">
+</form>
+{% if name in d.keys()%}
+
+      NAME :{{name}}<br>
+      NUMBER:{{d[name]}}
+{% endif %}
+{% if name not in d.keys() %}
+<h3> Sorry there is no contact added</h3>
+<h4> Thank You </h4>
+{% endif %}
+
+</div>
+</center>
+
+{% endblock %}
